@@ -9,7 +9,7 @@ const { MONGODB } = require("./config.js");
 // Public subscription, can be use in resolvers
 const pubsub = new PubSub();
 
-const PORT = process.env.port || 5000;
+const PORT = process.env.PORT || 5000;
 
 const server = new ApolloServer({
   typeDefs,

@@ -4,12 +4,13 @@ const mongoose = require("mongoose");
 
 const typeDefs = require("./graphql/typedefs");
 const resolvers = require("./graphql/resolvers");
-const { MONGODB } = require("./config.js");
+// const { MONGODB } = require("./config.js");
 
 // Public subscription, can be use in resolvers
 const pubsub = new PubSub();
 
 const PORT = process.env.PORT || 5000;
+const MONGODB = process.env.MONGODB;
 
 const server = new ApolloServer({
   typeDefs,

@@ -1,10 +1,11 @@
+require("dotenv").config();
+
 const { ApolloServer, PubSub } = require("apollo-server");
 const gql = require("graphql-tag");
 const mongoose = require("mongoose");
 
 const typeDefs = require("./graphql/typedefs");
 const resolvers = require("./graphql/resolvers");
-// const { MONGODB } = require("./config.js");
 
 // Public subscription, can be use in resolvers
 const pubsub = new PubSub();
